@@ -1,0 +1,7 @@
+- name: configure frontend server 
+  hosts: frontend
+  vars_files:
+  - credentials.yml 
+  become: yes 
+  roles:
+  - frontend 
