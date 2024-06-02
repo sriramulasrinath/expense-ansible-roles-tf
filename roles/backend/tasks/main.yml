@@ -35,6 +35,11 @@
     dest: /etc/systemd/system/backend.service
   notify:
   - daemon reload
+
+- name: enable backend service
+  ansible.builtin.service:
+    name: backend
+    enabled: yes
  
 - name: install python mysql dependencies
   ansible.builtin.pip: 
